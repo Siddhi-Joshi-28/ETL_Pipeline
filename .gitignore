@@ -1,33 +1,28 @@
+# Environment variables
+.env
+
 # Python
 __pycache__/
 *.py[cod]
 *.pyo
 
-# Virtual environment
+# Virtual environments
 venv/
 .venv/
+env/
 
-# Environment variables
-.env
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
+# Pytest
+.pytest_cache/
 
 # Logs
 logs/*.log
 
-# Generated data
-data/processed/*
-data/rejected/*
+# Jupyter
+.ipynb_checkpoints/
 
 # IDE
 .vscode/
 
-# OS
+# OS files
 .DS_Store
 Thumbs.db
-
-# Python cache
-.pytest_cache/
