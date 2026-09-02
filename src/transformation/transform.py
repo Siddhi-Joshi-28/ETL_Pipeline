@@ -4,6 +4,10 @@ from pathlib import Path
 from src.extract.extract import extract_data
 from src.validation.validate import validate_data
 from src.cleaning.clean import clean_data
+from src.logging_config import get_logger
+
+
+logger = get_logger(__name__)
 
 
 # Find project root
@@ -27,92 +31,137 @@ def transform_data(df):
     4. Arrange columns for database loading
     """
 
+    logger.info("Transformation stage started")
+
     print("=" * 50)
     print("TRANSFORMATION STAGE")
     print("=" * 50)
 
-    df = df.copy()
+    try:
 
-    # -------------------------------------------------
-    # 1. Make sure created_at is datetime
-    # -------------------------------------------------
+        df = df.copy()
 
-    df["created_at"] = pd.to_datetime(
-        df["created_at"],
-        errors="coerce"
-    )
+        input_count = len(df)
 
-    # -------------------------------------------------
-    # 2. Create date information
-    # -------------------------------------------------
+        logger.info(
+            f"Transformation input records: {input_count}"
+        )
 
-    df["created_date"] = df["created_at"].dt.date
+        # -------------------------------------------------
+        # 1. Make sure created_at is datetime
+        # -------------------------------------------------
 
-    df["created_month"] = (
-        df["created_at"]
-        .dt.to_period("M")
-        .astype(str)
-    )
+        df["created_at"] = pd.to_datetime(
+            df["created_at"],
+            errors="coerce"
+        )
 
-    df["created_year"] = (
-        df["created_at"]
-        .dt.year
-    )
+        logger.info(
+            "created_at converted to datetime"
+        )
 
-    # -------------------------------------------------
-    # 3. Add pipeline processing timestamp
-    # -------------------------------------------------
+        # -------------------------------------------------
+        # 2. Create date information
+        # -------------------------------------------------
 
-    df["processed_at"] = pd.Timestamp.now()
+        df["created_date"] = df["created_at"].dt.date
 
-    # -------------------------------------------------
-    # 4. Arrange columns
-    # -------------------------------------------------
+        df["created_month"] = (
+            df["created_at"]
+            .dt.to_period("M")
+            .astype(str)
+        )
 
-    columns = [
-        "question_id",
-        "user_id",
-        "category",
-        "city",
-        "question_text",
-        "created_at",
-        "created_date",
-        "created_month",
-        "created_year",
-        "processed_at",
-    ]
+        df["created_year"] = (
+            df["created_at"]
+            .dt.year
+        )
 
-    df = df[columns]
+        logger.info(
+            "Created date, month and year columns"
+        )
 
-    # -------------------------------------------------
-    # 5. Save transformed data
-    # -------------------------------------------------
+        # -------------------------------------------------
+        # 3. Add pipeline processing timestamp
+        # -------------------------------------------------
 
-    PROCESSED_DIR.mkdir(
-        parents=True,
-        exist_ok=True
-    )
+        df["processed_at"] = pd.Timestamp.now()
 
-    df.to_csv(
-        PROCESSED_FILE,
-        index=False
-    )
+        logger.info(
+            "Added processed_at timestamp"
+        )
 
-    # -------------------------------------------------
-    # Print results
-    # -------------------------------------------------
+        # -------------------------------------------------
+        # 4. Arrange columns
+        # -------------------------------------------------
 
-    print(f"Input records       : {len(df)}")
-    print(f"Output records      : {len(df)}")
-    print(f"Output columns      : {len(df.columns)}")
-    print(f"Processed file      : {PROCESSED_FILE}")
+        columns = [
+            "question_id",
+            "user_id",
+            "category",
+            "city",
+            "question_text",
+            "created_at",
+            "created_date",
+            "created_month",
+            "created_year",
+            "processed_at",
+        ]
 
-    print("\nFinal columns:")
-    print(list(df.columns))
+        df = df[columns]
 
-    print("=" * 50)
+        logger.info(
+            f"Columns arranged | Total columns: {len(df.columns)}"
+        )
 
-    return df
+        # -------------------------------------------------
+        # 5. Save transformed data
+        # -------------------------------------------------
+
+        PROCESSED_DIR.mkdir(
+            parents=True,
+            exist_ok=True
+        )
+
+        df.to_csv(
+            PROCESSED_FILE,
+            index=False
+        )
+
+        logger.info(
+            f"Transformed data saved to: {PROCESSED_FILE}"
+        )
+
+        # -------------------------------------------------
+        # Print results
+        # -------------------------------------------------
+
+        print(f"Input records       : {input_count}")
+        print(f"Output records      : {len(df)}")
+        print(f"Output columns      : {len(df.columns)}")
+        print(f"Processed file      : {PROCESSED_FILE}")
+
+        print("\nFinal columns:")
+        print(list(df.columns))
+
+        print("=" * 50)
+
+        logger.info(
+            f"Transformation completed | "
+            f"Input: {input_count} | "
+            f"Output: {len(df)} | "
+            f"Columns: {len(df.columns)}"
+        )
+
+        return df
+
+    except Exception as error:
+
+        logger.error(
+            f"Transformation stage failed: {error}"
+        )
+
+        raise
 
 
 if __name__ == "__main__":

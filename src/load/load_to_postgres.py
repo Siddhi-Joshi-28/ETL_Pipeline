@@ -5,6 +5,11 @@ import pandas as pd
 import psycopg2
 from dotenv import load_dotenv
 
+from src.logging_config import get_logger
+
+
+logger = get_logger(__name__)
+
 
 # -------------------------------------------------
 # Project paths
@@ -36,13 +41,29 @@ def get_connection():
     Create a connection to PostgreSQL.
     """
 
-    return psycopg2.connect(
-        host=os.getenv("DB_HOST"),
-        port=os.getenv("DB_PORT"),
-        database=os.getenv("DB_NAME"),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
-    )
+    logger.info("Connecting to PostgreSQL")
+
+    try:
+
+        connection = psycopg2.connect(
+            host=os.getenv("DB_HOST"),
+            port=os.getenv("DB_PORT"),
+            database=os.getenv("DB_NAME"),
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+        )
+
+        logger.info("PostgreSQL connection successful")
+
+        return connection
+
+    except Exception as error:
+
+        logger.error(
+            f"PostgreSQL connection failed: {error}"
+        )
+
+        raise
 
 
 # -------------------------------------------------
@@ -51,24 +72,62 @@ def get_connection():
 
 def load_data():
 
+    logger.info("Load stage started")
+
     print("=" * 50)
     print("LOAD STAGE")
     print("=" * 50)
 
+    # -------------------------------------------------
     # Check processed file
+    # -------------------------------------------------
+
     if not PROCESSED_FILE.exists():
+
+        logger.error(
+            f"Processed file not found: {PROCESSED_FILE}"
+        )
+
         raise FileNotFoundError(
             f"Processed file not found: {PROCESSED_FILE}"
         )
 
+    logger.info(
+        f"Processed file found: {PROCESSED_FILE}"
+    )
+
+    # -------------------------------------------------
     # Read transformed data
-    df = pd.read_csv(PROCESSED_FILE)
+    # -------------------------------------------------
+
+    try:
+
+        df = pd.read_csv(PROCESSED_FILE)
+
+        logger.info(
+            f"Processed data loaded | Records: {len(df)}"
+        )
+
+    except Exception as error:
+
+        logger.error(
+            f"Failed to read processed data: {error}"
+        )
+
+        raise
 
     print(f"Records to load: {len(df)}")
 
-    connection = get_connection()
+    connection = None
+    cursor = None
 
     try:
+
+        # -------------------------------------------------
+        # Connect to PostgreSQL
+        # -------------------------------------------------
+
+        connection = get_connection()
 
         cursor = connection.cursor()
 
@@ -77,6 +136,10 @@ def load_data():
         # -----------------------------------------
 
         user_ids = df["user_id"].dropna().unique()
+
+        logger.info(
+            f"Processing {len(user_ids)} unique users"
+        )
 
         for user_id in user_ids:
 
@@ -91,9 +154,17 @@ def load_data():
 
         print(f"Users processed: {len(user_ids)}")
 
+        logger.info(
+            f"Users processed successfully: {len(user_ids)}"
+        )
+
         # -----------------------------------------
         # Insert questions
         # -----------------------------------------
+
+        logger.info(
+            f"Starting question loading: {len(df)} records"
+        )
 
         for _, row in df.iterrows():
 
@@ -135,30 +206,61 @@ def load_data():
                     row["created_at"],
                     row["created_date"],
                     row["created_month"],
-                    int(row["created_year"]),
+                    row["created_year"],
                     row["processed_at"],
                 )
             )
 
+        # -------------------------------------------------
         # Save changes
+        # -------------------------------------------------
+
         connection.commit()
 
         print(f"Questions loaded: {len(df)}")
         print("Database loading completed successfully.")
 
+        logger.info(
+            f"Questions loaded successfully: {len(df)}"
+        )
+
+        logger.info(
+            "PostgreSQL transaction committed successfully"
+        )
+
+        logger.info(
+            "Load stage completed"
+        )
+
     except Exception as error:
 
-        connection.rollback()
+        if connection:
+            connection.rollback()
 
         print("Database loading failed.")
         print(f"Error: {error}")
+
+        logger.error(
+            f"Database loading failed: {error}"
+        )
+
+        logger.info(
+            "PostgreSQL transaction rolled back"
+        )
 
         raise
 
     finally:
 
-        cursor.close()
-        connection.close()
+        if cursor:
+            cursor.close()
+
+        if connection:
+            connection.close()
+
+        logger.info(
+            "PostgreSQL connection closed"
+        )
 
     print("=" * 50)
 
