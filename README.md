@@ -1,31 +1,32 @@
 # HelloQ ETL Pipeline
 
-A Python-based ETL pipeline designed to process HelloQ question data.
+This project demonstrates an ETL pipeline using synthetic HelloQ question data.
 
-The pipeline extracts raw question data from CSV, validates and cleans
-the data, transforms it into an analytics-ready format, and loads the
-final data into PostgreSQL.
+The dataset contains around 1,000 questions and 30 users.
+
+The pipeline extracts, validates, cleans, transforms, and loads the data into PostgreSQL. SQL is then used for analysis, and a Streamlit dashboard displays the results.
 
 ---
 
 ## ETL Architecture
 
-Raw CSV Data
-     ↓
+Raw CSV
+  ↓
 Extract
-     ↓
+  ↓
 Validate
-     ↓
+  ↓
 Clean
-     ↓
+  ↓
 Transform
-     ↓
+  ↓
 Processed CSV
-     ↓
+  ↓
 PostgreSQL
-     ↓
-Analytics SQL
-
+  ↓
+SQL Analytics
+  ↓
+Streamlit Dashboard
 
 ---
 
@@ -38,84 +39,87 @@ Analytics SQL
 - SQL
 - pytest
 - python-dotenv
+- Streamlit
 - Git
 - GitHub
-
 
 ---
 
 ## Project Features
 
-### 1. Data Extraction
+### 1. Extract
 
-Reads raw HelloQ question data from a CSV file.
+Reads raw HelloQ question data from CSV using Pandas.
 
-### 2. Data Validation
+### 2. Validate
 
 Checks:
 
 - Required columns
-- Missing required values
+- Missing values
 - question_id
 - user_id
-- created_at timestamp
+- created_at
 
-Invalid records are stored separately.
+Invalid records are saved in:
 
-### 3. Data Cleaning
+```text
+data/rejected/invalid_questions.csv
+```
 
-The cleaning stage:
+### 3. Clean
 
 - Removes duplicate question IDs
-- Removes records with missing required values
+- Removes missing required values
 - Standardizes categories
 - Standardizes cities
 - Cleans question text
-- Converts numeric IDs
+- Converts IDs to numeric types
 - Converts timestamps
 
-### 4. Data Transformation
+### 4. Transform
 
-The transformation stage creates:
+Creates:
 
 - created_date
 - created_month
 - created_year
 - processed_at
 
-The transformed data is saved as:
+Output:
 
+```text
 data/processed/helloq_questions_processed.csv
+```
 
-### 5. PostgreSQL Loading
+### 5. Load
 
-The transformed data is loaded into PostgreSQL.
+Loads processed data into PostgreSQL.
 
-The database contains:
+Database:
 
-- users
-- questions
+```text
+helloq_db
+```
 
-Duplicate question IDs are handled using PostgreSQL
-ON CONFLICT logic.
+Tables:
+
+```text
+users
+questions
+```
+
+Duplicate question IDs are handled using `ON CONFLICT`.
 
 ### 6. Logging
 
-The pipeline records important events such as:
+Logs important pipeline events and errors.
 
-- Pipeline started
-- Records extracted
-- Validation results
-- Cleaning results
-- Transformation results
-- Database connection
-- Records loaded
-- Pipeline completion
-- Errors
+Log file:
 
-Logs are stored in:
-
+```text
 logs/etl_pipeline.log
+```
 
 ### 7. Testing
 
@@ -126,15 +130,39 @@ The project uses pytest to test:
 - Cleaning
 - Transformation
 
-Run all tests with:
+Run:
 
+```bash
 pytest -v
+```
 
+### 8. Dashboard
+
+`app.py` contains the Streamlit dashboard.
+
+The dashboard displays:
+
+- Total Questions
+- Total Users
+- Categories
+- Cities
+- Questions by Category
+- Questions by City
+- Questions Over Time
+- Top Users
+- Latest Questions
+
+Run:
+
+```bash
+streamlit run app.py
+```
 
 ---
 
 ## Project Structure
 
+```text
 HelloQ_ETL_Pipeline/
 │
 ├── data/
@@ -148,19 +176,14 @@ HelloQ_ETL_Pipeline/
 ├── src/
 │   ├── extract/
 │   │   └── extract.py
-│   │
 │   ├── validation/
 │   │   └── validate.py
-│   │
 │   ├── cleaning/
 │   │   └── clean.py
-│   │
 │   ├── transformation/
 │   │   └── transform.py
-│   │
 │   ├── load/
 │   │   └── load_to_postgres.py
-│   │
 │   ├── logging_config.py
 │   └── pipeline.py
 │
@@ -172,34 +195,35 @@ HelloQ_ETL_Pipeline/
 │   └── test_transformation.py
 │
 ├── logs/
-│
+├── app.py
 ├── .env.example
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
 ## Database
 
-PostgreSQL is used as the final data storage system.
+PostgreSQL database:
 
-Database:
-
+```text
 helloq_db
+```
 
 Tables:
 
+```text
 users
 questions
-
+```
 
 ---
 
-## Example Analytics
+## Analytics
 
-The project includes SQL queries for:
+SQL analytics include:
 
 - Total questions
 - Total users
@@ -210,109 +234,115 @@ The project includes SQL queries for:
 - Questions per user
 - Top users
 - Latest questions
-- Category and city analysis
 
-The queries are available in:
+SQL file:
 
+```text
 sql/analytics.sql
-
+```
 
 ---
 
 ## How to Run
 
-### 1. Clone the repository
+### Step 1: Install dependencies
 
-git clone <your-github-repository-url>
-
-cd HelloQ_ETL_Pipeline
-
-
-### 2. Install dependencies
-
+```bash
 pip install -r requirements.txt
+```
 
+### Step 2: Configure PostgreSQL
 
-### 3. Configure PostgreSQL
+Create:
 
-Create a PostgreSQL database named:
-
+```text
 helloq_db
+```
 
-Configure the database credentials in `.env`.
+Create `.env`:
 
-Example:
-
+```env
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=helloq_db
 DB_USER=postgres
 DB_PASSWORD=your_password
-
+```
 
 Do not upload `.env` to GitHub.
 
+### Step 3: Run ETL Pipeline
 
-### 4. Run the complete ETL pipeline
-
+```bash
 python -m src.pipeline
+```
 
+### Step 4: Run Tests
 
-### 5. Run tests
-
+```bash
 pytest -v
+```
 
+### Step 5: Run Analytics
 
----
+Open:
 
-## Data Flow
+```text
+sql/analytics.sql
+```
 
-The pipeline processes data in the following order:
+and run the required queries in PostgreSQL.
 
-Raw CSV
-  ↓
-Extraction
-  ↓
-Validation
-  ↓
-Rejected Records
-  ↓
-Cleaning
-  ↓
-Transformation
-  ↓
-Processed CSV
-  ↓
-PostgreSQL
-  ↓
-Analytics
+### Step 6: Run Dashboard
 
+```bash
+streamlit run app.py
+```
+
+Open the Streamlit URL shown in the terminal.
 
 ---
 
-## Current Dataset
+## Complete Flow
 
-The demonstration dataset contains approximately:
+```text
+1. Raw CSV
+2. Extract
+3. Validate
+4. Clean
+5. Transform
+6. Save Processed CSV
+7. Load into PostgreSQL
+8. Run SQL Analytics
+9. Run Tests
+10. Start Streamlit Dashboard
+```
 
-- 1,000 questions
+---
+
+## Dataset
+
+The demo dataset contains:
+
+- Approximately 1,000 questions
 - 30 users
 
-The pipeline is designed so that the same process can be used
-with larger datasets.
+The data is synthetic and is used for testing and demonstrating the ETL pipeline.
 
 ---
 
 ## Learning Objectives
 
-This project demonstrates practical understanding of:
+This project demonstrates:
 
-- ETL pipeline design
-- Data validation
-- Data cleaning
-- Data transformation
+- ETL Pipeline
+- Data Validation
+- Data Cleaning
+- Data Transformation
 - PostgreSQL
-- SQL analytics
-- Python logging
-- Error handling
-- Automated testing
+- SQL
+- Python Logging
+- Error Handling
+- Automated Testing
+- Streamlit Dashboard
 - Git and GitHub
