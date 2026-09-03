@@ -132,6 +132,17 @@ def load_data():
         cursor = connection.cursor()
 
         # -----------------------------------------
+        # Clear old demo data
+        # -----------------------------------------
+
+        cursor.execute("""
+        TRUNCATE TABLE questions, users
+        RESTART IDENTITY CASCADE;
+        """)
+
+        print("Old database data cleared.")
+
+        # -----------------------------------------
         # Insert users
         # -----------------------------------------
 

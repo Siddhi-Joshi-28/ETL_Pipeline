@@ -1,100 +1,73 @@
--- =====================================================
--- HelloQ ETL Pipeline - Analytics Queries
--- =====================================================
+-- ============================================
+-- HelloQ ETL Pipeline - SQL Analytics
+-- ============================================
 
--- -----------------------------------------------------
--- 1. Total number of questions
--- -----------------------------------------------------
-
+-- 1. Total Questions
 SELECT COUNT(*) AS total_questions
 FROM questions;
 
 
--- -----------------------------------------------------
--- 2. Total number of users
--- -----------------------------------------------------
-
+-- 2. Total Users
 SELECT COUNT(*) AS total_users
 FROM users;
 
 
--- -----------------------------------------------------
--- 3. Questions by category
--- -----------------------------------------------------
-
+-- 3. Questions by Category
 SELECT
     category,
-    COUNT(*) AS total_questions
+    COUNT(*) AS question_count
 FROM questions
 GROUP BY category
-ORDER BY total_questions DESC;
+ORDER BY question_count DESC;
 
 
--- -----------------------------------------------------
--- 4. Questions by city
--- -----------------------------------------------------
-
+-- 4. Questions by City
 SELECT
     city,
-    COUNT(*) AS total_questions
+    COUNT(*) AS question_count
 FROM questions
 GROUP BY city
-ORDER BY total_questions DESC;
+ORDER BY question_count DESC;
 
 
--- -----------------------------------------------------
--- 5. Questions by year
--- -----------------------------------------------------
-
+-- 5. Questions by Year
 SELECT
     created_year,
-    COUNT(*) AS total_questions
+    COUNT(*) AS question_count
 FROM questions
 GROUP BY created_year
 ORDER BY created_year;
 
 
--- -----------------------------------------------------
--- 6. Questions by month
--- -----------------------------------------------------
-
+-- 6. Questions by Month
 SELECT
     created_month,
-    COUNT(*) AS total_questions
+    COUNT(*) AS question_count
 FROM questions
 GROUP BY created_month
 ORDER BY created_month;
 
 
--- -----------------------------------------------------
--- 7. Questions asked by each user
--- -----------------------------------------------------
-
+-- 7. Questions per User
 SELECT
     user_id,
-    COUNT(*) AS total_questions
+    COUNT(*) AS question_count
 FROM questions
 GROUP BY user_id
-ORDER BY total_questions DESC;
+ORDER BY question_count DESC;
 
 
--- -----------------------------------------------------
--- 8. Top 10 users by number of questions
--- -----------------------------------------------------
-
+-- 8. Top 10 Users
 SELECT
     user_id,
-    COUNT(*) AS total_questions
+    COUNT(*) AS question_count
 FROM questions
 GROUP BY user_id
-ORDER BY total_questions DESC
+ORDER BY question_count DESC
 LIMIT 10;
 
 
--- -----------------------------------------------------
--- 9. Latest 10 questions
--- -----------------------------------------------------
-
+-- 9. Latest Questions
 SELECT
     question_id,
     user_id,
@@ -107,14 +80,11 @@ ORDER BY created_at DESC
 LIMIT 10;
 
 
--- -----------------------------------------------------
--- 10. Questions by category and city
--- -----------------------------------------------------
-
+-- 10. Category + City Analysis
 SELECT
     category,
     city,
-    COUNT(*) AS total_questions
+    COUNT(*) AS question_count
 FROM questions
 GROUP BY category, city
-ORDER BY total_questions DESC;
+ORDER BY question_count DESC;
