@@ -1,7 +1,3 @@
-# 🍔 Food Delivery ETL & Analytics Pipeline
-
-A practical Data Engineering and Analytics project demonstrating the complete journey of food-delivery order data:
-
 **Data Source → Extraction → Validation → Cleaning → Transformation → PostgreSQL → SQL Analytics → Dashboard**
 
 This repository contains two versions:
