@@ -1,0 +1,153 @@
+/* Main application */
+
+.main {
+    background-color: #f7f8fc;
+}
+
+/* Hide Streamlit default elements */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+/* Dashboard title */
+
+.dashboard-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #eceef3;
+}
+
+.dashboard-subtitle {
+    color: #6b7280;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* Live indicator */
+
+.live-indicator {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background-color: #e8f8ee;
+    color: #16803c;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+/* KPI card */
+
+.kpi-card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    min-height: 120px;
+}
+
+.kpi-title {
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.kpi-value {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 8px;
+    color: #111827;
+}
+
+.kpi-description {
+    color: #9ca3af;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Section */
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    color: #eff2f7;
+}
+
+/* Chart card title (used inside st.container(border=True)) */
+
+.chart-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #f1f2f5;
+    margin-bottom: 4px;
+}
+
+/* Bordered containers used as chart/table cards */
+
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: white;
+    border-radius: 14px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Status badges (Analysis page recent-orders table) */
+
+.status-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-delivered {
+    background-color: #e8f8ee;
+    color: #16803c;
+}
+
+.badge-cancelled {
+    background-color: #fdeaea;
+    color: #b91c1c;
+}
+
+.badge-pending {
+    background-color: #fef6e6;
+    color: #b45309;
+}
+
+.badge-default {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+/* Simple HTML table used for recent orders / top customers */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.data-table th {
+    text-align: left;
+    color: #6b7280;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.data-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #f3f4f6;
+    color: #f6f7fa;
+}
