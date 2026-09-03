@@ -33,3 +33,6 @@ data/rejected/
 # Temporary files
 *.tmp
 *.temp
+# Runtime state
+api/order_id.txt
+data/state/
