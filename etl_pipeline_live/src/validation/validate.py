@@ -336,7 +336,11 @@ if __name__ == "__main__":
         / "rejected"
     )
 
-    # Create directories if they don't exist
+    state_dir = (
+        project_root
+        / "data"
+        / "state"
+    )
 
     processed_dir.mkdir(
         parents=True,
@@ -348,104 +352,274 @@ if __name__ == "__main__":
         exist_ok=True
     )
 
-    # Find incoming files
+    state_dir.mkdir(
+        parents=True,
+        exist_ok=True
+    )
 
-    files = sorted(
+    # --------------------------------------------------
+    # File used to remember processed batches
+    # --------------------------------------------------
+
+    state_file = (
+        state_dir
+        / "processed_files.txt"
+    )
+
+    if state_file.exists():
+
+        processed_files = set(
+            state_file
+            .read_text()
+            .splitlines()
+        )
+
+    else:
+
+        processed_files = set()
+
+    # --------------------------------------------------
+    # Find incoming files
+    # --------------------------------------------------
+
+    incoming_files = sorted(
         incoming_dir.glob(
             "orders_*.csv"
         )
     )
 
-    if not files:
+    if not incoming_files:
 
         print(
-            "No incoming order files found."
+            "No incoming files found."
         )
 
         raise SystemExit
 
-    # Process the latest incoming file
+    # --------------------------------------------------
+    # Select only NEW files
+    # --------------------------------------------------
 
-    latest_file = files[-1]
+    new_files = [
+        file
+        for file in incoming_files
+        if file.name not in processed_files
+    ]
+
+    print()
+    print("=" * 60)
+    print("INCREMENTAL VALIDATION")
+    print("=" * 60)
 
     print(
-        f"Reading: {latest_file.name}"
+        f"Incoming files : {len(incoming_files)}"
     )
 
-    df = pd.read_csv(
-        latest_file
+    print(
+        f"Already processed: {len(processed_files)}"
     )
 
-    # Validate
-
-    valid_df, rejected_df = (
-        validate_orders(df)
+    print(
+        f"New files      : {len(new_files)}"
     )
 
-    # Save valid records
+    # --------------------------------------------------
+    # Nothing new
+    # --------------------------------------------------
+
+    if not new_files:
+
+        print()
+        print(
+            "No new files to process."
+        )
+
+        print("=" * 60)
+
+        raise SystemExit
+
+    all_valid = []
+    all_rejected = []
+
+    # --------------------------------------------------
+    # Process only new files
+    # --------------------------------------------------
+
+    for file in new_files:
+
+        print()
+        print(
+            f"Processing: {file.name}"
+        )
+
+        df = pd.read_csv(
+            file
+        )
+
+        valid_df, rejected_df = (
+            validate_orders(df)
+        )
+
+        all_valid.append(
+            valid_df
+        )
+
+        all_rejected.append(
+            rejected_df
+        )
+
+        print(
+            f"Total    : {len(df)}"
+        )
+
+        print(
+            f"Valid    : {len(valid_df)}"
+        )
+
+        print(
+            f"Rejected : {len(rejected_df)}"
+        )
+
+        # Mark this file as processed
+
+        with open(
+            state_file,
+            "a"
+        ) as state:
+
+            state.write(
+                file.name + "\n"
+            )
+
+    # --------------------------------------------------
+    # Combine new valid records
+    # --------------------------------------------------
+
+    new_valid_orders = pd.concat(
+        all_valid,
+        ignore_index=True
+    )
+
+    new_rejected_orders = pd.concat(
+        all_rejected,
+        ignore_index=True
+    )
+
+    # --------------------------------------------------
+    # Existing valid data
+    # --------------------------------------------------
 
     valid_file = (
         processed_dir
         / "valid_orders.csv"
     )
 
-    valid_df.to_csv(
+    if valid_file.exists():
+
+        existing_valid_orders = pd.read_csv(
+            valid_file
+        )
+
+        valid_orders = pd.concat(
+            [
+                existing_valid_orders,
+                new_valid_orders
+            ],
+            ignore_index=True
+        )
+
+    else:
+
+        valid_orders = new_valid_orders
+
+    # --------------------------------------------------
+    # Remove duplicate order IDs
+    # --------------------------------------------------
+
+    valid_orders = (
+        valid_orders
+        .drop_duplicates(
+            subset=["order_id"],
+            keep="first"
+        )
+    )
+
+    # --------------------------------------------------
+    # Save valid data
+    # --------------------------------------------------
+
+    valid_orders.to_csv(
         valid_file,
         index=False
     )
 
-    # Save rejected records
+    # --------------------------------------------------
+    # Save rejected data
+    # --------------------------------------------------
 
     rejected_file = (
         rejected_dir
         / "invalid_orders.csv"
     )
 
-    if not rejected_df.empty:
+    if not new_rejected_orders.empty:
 
-        rejected_df.to_csv(
+        if rejected_file.exists():
+
+            existing_rejected = pd.read_csv(
+                rejected_file
+            )
+
+            rejected_orders = pd.concat(
+                [
+                    existing_rejected,
+                    new_rejected_orders
+                ],
+                ignore_index=True
+            )
+
+        else:
+
+            rejected_orders = (
+                new_rejected_orders
+            )
+
+        rejected_orders.to_csv(
             rejected_file,
             index=False
         )
 
+    # --------------------------------------------------
+    # Final result
+    # --------------------------------------------------
+
     print()
     print("=" * 60)
-    print("VALIDATION RESULT")
+    print("VALIDATION COMPLETE")
     print("=" * 60)
 
     print(
-        f"Total records    : {len(df)}"
+        f"New files processed : {len(new_files)}"
     )
 
     print(
-        f"Valid records    : {len(valid_df)}"
+        f"New valid records   : "
+        f"{len(new_valid_orders)}"
     )
 
     print(
-        f"Rejected records : {len(rejected_df)}"
+        f"New rejected records: "
+        f"{len(new_rejected_orders)}"
+    )
+
+    print(
+        f"Total valid records : "
+        f"{len(valid_orders)}"
     )
 
     print()
     print(
-        f"Valid data saved to:"
+        f"Saved to: {valid_file}"
     )
-
-    print(valid_file)
-
-    print()
-
-    if not rejected_df.empty:
-
-        print(
-            "Rejected data saved to:"
-        )
-
-        print(rejected_file)
-
-    else:
-
-        print(
-            "No rejected records."
-        )
 
     print("=" * 60)
