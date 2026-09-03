@@ -1,101 +1,101 @@
 question_id,user_id,category,city,question_text,created_at,created_date,created_month,created_year,processed_at
-1,4,Business,Chennai,How can I start learning machine learning?,2026-04-20 15:56:00,2026-04-20,2026-04,2026,2026-09-03 10:38:15.170826
-2,14,Health,Mumbai,How can I learn Python?,2026-06-22 02:28:00,2026-06-22,2026-06,2026,2026-09-03 10:38:15.170826
-3,10,General,Pune,How can I prepare for a technical interview?,2026-05-27 22:08:00,2026-05-27,2026-05,2026,2026-09-03 10:38:15.170826
-4,8,Technology,Hyderabad,What are good resources for learning technology?,2026-05-09 07:52:00,2026-05-09,2026-05,2026,2026-09-03 10:38:15.170826
-5,15,Business,Mumbai,What is data engineering?,2026-01-19 07:06:00,2026-01-19,2026-01,2026,2026-09-03 10:38:15.170826
-6,25,Programming,Hyderabad,What is data engineering?,2026-03-01 18:20:00,2026-03-01,2026-03,2026,2026-09-03 10:38:15.170826
-7,18,General,Pune,What is the difference between SQL and NoSQL?,2026-06-05 11:02:00,2026-06-05,2026-06,2026,2026-09-03 10:38:15.170826
-8,1,Career,Pune,What is the difference between SQL and NoSQL?,2026-03-10 04:16:00,2026-03-10,2026-03,2026,2026-09-03 10:38:15.170826
-9,9,Programming,Hyderabad,How can I start learning machine learning?,2026-05-04 08:39:00,2026-05-04,2026-05,2026,2026-09-03 10:38:15.170826
-10,24,Business,Mumbai,How can I improve my career skills?,2026-06-12 15:33:00,2026-06-12,2026-06,2026,2026-09-03 10:38:15.170826
-11,26,Career,Chennai,How can I prepare for a technical interview?,2026-06-24 04:48:00,2026-06-24,2026-06,2026,2026-09-03 10:38:15.170826
-12,3,Technology,Ahmedabad,What is data engineering?,2026-03-06 21:09:00,2026-03-06,2026-03,2026,2026-09-03 10:38:15.170826
-13,2,Programming,Delhi,What is data engineering?,2026-01-23 00:18:00,2026-01-23,2026-01,2026,2026-09-03 10:38:15.170826
-14,4,Career,Ahmedabad,How can I improve my programming skills?,2026-05-26 08:51:00,2026-05-26,2026-05,2026,2026-09-03 10:38:15.170826
-15,25,Programming,Delhi,What is the difference between SQL and NoSQL?,2026-01-28 17:07:00,2026-01-28,2026-01,2026,2026-09-03 10:38:15.170826
-16,11,Health,Chennai,How can I improve my programming skills?,2026-03-04 19:58:00,2026-03-04,2026-03,2026,2026-09-03 10:38:15.170826
-17,2,Technology,Ahmedabad,How can I improve my programming skills?,2026-05-19 08:59:00,2026-05-19,2026-05,2026,2026-09-03 10:38:15.170826
-18,28,Business,Bangalore,How can I learn data analytics?,2026-06-02 06:19:00,2026-06-02,2026-06,2026,2026-09-03 10:38:15.170826
-19,1,Career,Chennai,How can I learn Python?,2026-01-22 13:45:00,2026-01-22,2026-01,2026,2026-09-03 10:38:15.170826
-20,5,Technology,Hyderabad,What is the best way to learn SQL?,2026-03-17 23:34:00,2026-03-17,2026-03,2026,2026-09-03 10:38:15.170826
-21,4,Technology,Mumbai,How can I learn Python?,2026-01-08 23:06:00,2026-01-08,2026-01,2026,2026-09-03 10:38:15.170826
-22,14,Education,Chennai,How can I start learning machine learning?,2026-06-14 09:08:00,2026-06-14,2026-06,2026,2026-09-03 10:38:15.170826
-23,26,General,Ahmedabad,What is the best way to learn SQL?,2026-03-26 04:06:00,2026-03-26,2026-03,2026,2026-09-03 10:38:15.170826
-24,26,Education,Pune,How can I improve my programming skills?,2026-02-08 00:37:00,2026-02-08,2026-02,2026,2026-09-03 10:38:15.170826
-25,30,Education,Mumbai,How can I start learning machine learning?,2026-04-17 21:39:00,2026-04-17,2026-04,2026,2026-09-03 10:38:15.170826
-26,3,Career,Jaipur,What is the best way to learn SQL?,2026-03-04 13:35:00,2026-03-04,2026-03,2026,2026-09-03 10:38:15.170826
-27,8,Health,Mumbai,What are good resources for learning technology?,2026-02-20 06:45:00,2026-02-20,2026-02,2026,2026-09-03 10:38:15.170826
-28,29,Career,Bangalore,What is data engineering?,2026-06-14 15:30:00,2026-06-14,2026-06,2026,2026-09-03 10:38:15.170826
-29,11,Programming,Hyderabad,What is the best way to learn SQL?,2026-03-08 21:48:00,2026-03-08,2026-03,2026,2026-09-03 10:38:15.170826
-30,14,Technology,Jaipur,How can I improve my career skills?,2026-01-28 14:57:00,2026-01-28,2026-01,2026,2026-09-03 10:38:15.170826
-31,3,Technology,Hyderabad,How can I improve my career skills?,2026-03-27 12:22:00,2026-03-27,2026-03,2026,2026-09-03 10:38:15.170826
-32,10,Programming,Delhi,How can I prepare for a technical interview?,2026-06-04 09:39:00,2026-06-04,2026-06,2026,2026-09-03 10:38:15.170826
-33,24,Education,Ahmedabad,What are good resources for learning technology?,2026-01-17 02:44:00,2026-01-17,2026-01,2026,2026-09-03 10:38:15.170826
-34,30,General,Hyderabad,How can I improve my programming skills?,2026-02-08 00:53:00,2026-02-08,2026-02,2026,2026-09-03 10:38:15.170826
-35,12,Health,Hyderabad,How can I prepare for a technical interview?,2026-01-02 08:24:00,2026-01-02,2026-01,2026,2026-09-03 10:38:15.170826
-36,23,Programming,Delhi,How can I improve my career skills?,2026-01-18 07:27:00,2026-01-18,2026-01,2026,2026-09-03 10:38:15.170826
-37,8,Health,Delhi,What are good resources for learning technology?,2026-04-16 20:51:00,2026-04-16,2026-04,2026,2026-09-03 10:38:15.170826
-38,8,General,Ahmedabad,How can I learn data analytics?,2026-04-06 08:56:00,2026-04-06,2026-04,2026,2026-09-03 10:38:15.170826
-39,25,Health,Hyderabad,What are good resources for learning technology?,2026-06-24 08:12:00,2026-06-24,2026-06,2026,2026-09-03 10:38:15.170826
-40,19,Health,Delhi,How can I learn data analytics?,2026-05-23 09:34:00,2026-05-23,2026-05,2026,2026-09-03 10:38:15.170826
-41,1,Career,Mumbai,What is the difference between SQL and NoSQL?,2026-03-17 15:25:00,2026-03-17,2026-03,2026,2026-09-03 10:38:15.170826
-42,25,General,Hyderabad,How can I improve my programming skills?,2026-01-30 08:46:00,2026-01-30,2026-01,2026,2026-09-03 10:38:15.170826
-43,2,Programming,Pune,How can I start learning machine learning?,2026-03-27 21:05:00,2026-03-27,2026-03,2026,2026-09-03 10:38:15.170826
-44,5,Health,Pune,What is the difference between SQL and NoSQL?,2026-05-29 23:10:00,2026-05-29,2026-05,2026,2026-09-03 10:38:15.170826
-45,12,Programming,Delhi,What is data engineering?,2026-02-10 21:58:00,2026-02-10,2026-02,2026,2026-09-03 10:38:15.170826
-46,19,Programming,Chennai,What is the difference between SQL and NoSQL?,2026-01-22 15:50:00,2026-01-22,2026-01,2026,2026-09-03 10:38:15.170826
-47,28,Technology,Chennai,How can I improve my programming skills?,2026-02-20 16:02:00,2026-02-20,2026-02,2026,2026-09-03 10:38:15.170826
-48,4,Health,Hyderabad,What is the best way to learn SQL?,2026-06-10 02:52:00,2026-06-10,2026-06,2026,2026-09-03 10:38:15.170826
-49,13,Career,Delhi,What is the best way to learn SQL?,2026-03-31 08:19:00,2026-03-31,2026-03,2026,2026-09-03 10:38:15.170826
-50,11,Health,Mumbai,How can I learn data analytics?,2026-02-19 00:23:00,2026-02-19,2026-02,2026,2026-09-03 10:38:15.170826
-51,22,Programming,Bangalore,What are good resources for learning technology?,2026-02-03 18:59:00,2026-02-03,2026-02,2026,2026-09-03 10:38:15.170826
-52,11,Programming,Jaipur,How can I improve my career skills?,2026-02-06 18:10:00,2026-02-06,2026-02,2026,2026-09-03 10:38:15.170826
-53,6,Business,Bangalore,What is the difference between SQL and NoSQL?,2026-01-13 00:14:00,2026-01-13,2026-01,2026,2026-09-03 10:38:15.170826
-54,9,Career,Jaipur,What is data engineering?,2026-05-25 19:22:00,2026-05-25,2026-05,2026,2026-09-03 10:38:15.170826
-55,21,Career,Hyderabad,How can I prepare for a technical interview?,2026-03-13 03:02:00,2026-03-13,2026-03,2026,2026-09-03 10:38:15.170826
-56,7,Technology,Jaipur,How can I start learning machine learning?,2026-01-26 10:53:00,2026-01-26,2026-01,2026,2026-09-03 10:38:15.170826
-57,8,Programming,Delhi,How can I learn data analytics?,2026-02-18 12:28:00,2026-02-18,2026-02,2026,2026-09-03 10:38:15.170826
-58,22,Programming,Delhi,What is the best way to learn SQL?,2026-01-25 10:27:00,2026-01-25,2026-01,2026,2026-09-03 10:38:15.170826
-59,22,Health,Mumbai,How can I improve my programming skills?,2026-06-20 08:10:00,2026-06-20,2026-06,2026,2026-09-03 10:38:15.170826
-60,27,General,Jaipur,What is data engineering?,2026-02-17 23:16:00,2026-02-17,2026-02,2026,2026-09-03 10:38:15.170826
-61,1,Health,Delhi,What is the best way to learn SQL?,2026-02-03 04:24:00,2026-02-03,2026-02,2026,2026-09-03 10:38:15.170826
-62,26,Business,Delhi,How can I improve my career skills?,2026-06-21 23:45:00,2026-06-21,2026-06,2026,2026-09-03 10:38:15.170826
-63,25,Technology,Jaipur,What are good resources for learning technology?,2026-01-03 08:18:00,2026-01-03,2026-01,2026,2026-09-03 10:38:15.170826
-64,9,Programming,Pune,How can I learn Python?,2026-05-26 17:46:00,2026-05-26,2026-05,2026,2026-09-03 10:38:15.170826
-65,10,Health,Chennai,What are good resources for learning technology?,2026-05-16 19:16:00,2026-05-16,2026-05,2026,2026-09-03 10:38:15.170826
-66,14,Career,Jaipur,How can I learn Python?,2026-01-14 03:53:00,2026-01-14,2026-01,2026,2026-09-03 10:38:15.170826
-67,24,Programming,Ahmedabad,What is the difference between SQL and NoSQL?,2026-03-05 08:55:00,2026-03-05,2026-03,2026,2026-09-03 10:38:15.170826
-68,17,Business,Bangalore,How can I learn Python?,2026-01-10 22:59:00,2026-01-10,2026-01,2026,2026-09-03 10:38:15.170826
-69,1,Health,Mumbai,How can I prepare for a technical interview?,2026-02-12 23:14:00,2026-02-12,2026-02,2026,2026-09-03 10:38:15.170826
-70,13,General,Ahmedabad,What are good resources for learning technology?,2026-03-28 17:04:00,2026-03-28,2026-03,2026,2026-09-03 10:38:15.170826
-71,23,Education,Hyderabad,What is the best way to learn SQL?,2026-04-28 20:26:00,2026-04-28,2026-04,2026,2026-09-03 10:38:15.170826
-72,12,Business,Ahmedabad,What is the best way to learn SQL?,2026-03-10 03:05:00,2026-03-10,2026-03,2026,2026-09-03 10:38:15.170826
-73,13,Education,Hyderabad,How can I start learning machine learning?,2026-04-12 15:41:00,2026-04-12,2026-04,2026,2026-09-03 10:38:15.170826
-74,5,General,Hyderabad,What are good resources for learning technology?,2026-05-01 19:38:00,2026-05-01,2026-05,2026,2026-09-03 10:38:15.170826
-75,7,Health,Bangalore,How can I learn data analytics?,2026-05-08 06:46:00,2026-05-08,2026-05,2026,2026-09-03 10:38:15.170826
-76,3,Career,Hyderabad,How can I improve my programming skills?,2026-06-10 06:45:00,2026-06-10,2026-06,2026,2026-09-03 10:38:15.170826
-77,26,Technology,Pune,How can I improve my career skills?,2026-04-11 22:29:00,2026-04-11,2026-04,2026,2026-09-03 10:38:15.170826
-78,3,Education,Delhi,How can I learn data analytics?,2026-02-01 20:59:00,2026-02-01,2026-02,2026,2026-09-03 10:38:15.170826
-79,9,General,Pune,How can I learn Python?,2026-04-30 08:28:00,2026-04-30,2026-04,2026,2026-09-03 10:38:15.170826
-80,30,Health,Mumbai,What are good resources for learning technology?,2026-01-24 06:07:00,2026-01-24,2026-01,2026,2026-09-03 10:38:15.170826
-81,8,Business,Jaipur,How can I prepare for a technical interview?,2026-06-01 04:09:00,2026-06-01,2026-06,2026,2026-09-03 10:38:15.170826
-82,20,Business,Delhi,How can I prepare for a technical interview?,2026-05-23 23:55:00,2026-05-23,2026-05,2026,2026-09-03 10:38:15.170826
-83,8,Health,Delhi,What are good resources for learning technology?,2026-05-07 00:31:00,2026-05-07,2026-05,2026,2026-09-03 10:38:15.170826
-84,5,Education,Hyderabad,How can I start learning machine learning?,2026-01-31 04:44:00,2026-01-31,2026-01,2026,2026-09-03 10:38:15.170826
-85,29,Business,Ahmedabad,How can I improve my career skills?,2026-04-26 03:08:00,2026-04-26,2026-04,2026,2026-09-03 10:38:15.170826
-86,22,Programming,Jaipur,How can I improve my career skills?,2026-05-23 20:38:00,2026-05-23,2026-05,2026,2026-09-03 10:38:15.170826
-87,13,General,Pune,How can I improve my programming skills?,2026-02-06 12:27:00,2026-02-06,2026-02,2026,2026-09-03 10:38:15.170826
-88,11,Programming,Mumbai,How can I learn data analytics?,2026-03-24 20:56:00,2026-03-24,2026-03,2026,2026-09-03 10:38:15.170826
-89,7,Programming,Bangalore,What is data engineering?,2026-04-17 11:03:00,2026-04-17,2026-04,2026,2026-09-03 10:38:15.170826
-90,2,Education,Bangalore,What is data engineering?,2026-04-20 17:34:00,2026-04-20,2026-04,2026,2026-09-03 10:38:15.170826
-91,18,Career,Chennai,How can I improve my programming skills?,2026-04-28 01:13:00,2026-04-28,2026-04,2026,2026-09-03 10:38:15.170826
-92,14,Health,Delhi,How can I improve my programming skills?,2026-02-06 13:16:00,2026-02-06,2026-02,2026,2026-09-03 10:38:15.170826
-93,12,Technology,Hyderabad,What is the best way to learn SQL?,2026-05-24 10:49:00,2026-05-24,2026-05,2026,2026-09-03 10:38:15.170826
-94,1,Business,Hyderabad,How can I improve my career skills?,2026-02-11 09:04:00,2026-02-11,2026-02,2026,2026-09-03 10:38:15.170826
-95,8,Programming,Ahmedabad,What is the best way to learn SQL?,2026-02-11 12:19:00,2026-02-11,2026-02,2026,2026-09-03 10:38:15.170826
-96,13,Business,Mumbai,How can I learn data analytics?,2026-06-03 11:30:00,2026-06-03,2026-06,2026,2026-09-03 10:38:15.170826
-97,12,Programming,Jaipur,How can I learn Python?,2026-03-26 18:39:00,2026-03-26,2026-03,2026,2026-09-03 10:38:15.170826
-98,5,General,Ahmedabad,What is the difference between SQL and NoSQL?,2026-06-17 16:46:00,2026-06-17,2026-06,2026,2026-09-03 10:38:15.170826
-99,2,Business,Pune,How can I improve my career skills?,2026-01-22 15:13:00,2026-01-22,2026-01,2026,2026-09-03 10:38:15.170826
-100,8,Business,Hyderabad,What is the best way to learn SQL?,2026-04-24 10:37:00,2026-04-24,2026-04,2026,2026-09-03 10:38:15.170826
+1,4,Business,Chennai,How can I start learning machine learning?,2026-04-20 15:56:00,2026-04-20,2026-04,2026,2026-09-03 11:34:20.468506
+2,14,Health,Mumbai,How can I learn Python?,2026-06-22 02:28:00,2026-06-22,2026-06,2026,2026-09-03 11:34:20.468506
+3,10,General,Pune,How can I prepare for a technical interview?,2026-05-27 22:08:00,2026-05-27,2026-05,2026,2026-09-03 11:34:20.468506
+4,8,Technology,Hyderabad,What are good resources for learning technology?,2026-05-09 07:52:00,2026-05-09,2026-05,2026,2026-09-03 11:34:20.468506
+5,15,Business,Mumbai,What is data engineering?,2026-01-19 07:06:00,2026-01-19,2026-01,2026,2026-09-03 11:34:20.468506
+6,25,Programming,Hyderabad,What is data engineering?,2026-03-01 18:20:00,2026-03-01,2026-03,2026,2026-09-03 11:34:20.468506
+7,18,General,Pune,What is the difference between SQL and NoSQL?,2026-06-05 11:02:00,2026-06-05,2026-06,2026,2026-09-03 11:34:20.468506
+8,1,Career,Pune,What is the difference between SQL and NoSQL?,2026-03-10 04:16:00,2026-03-10,2026-03,2026,2026-09-03 11:34:20.468506
+9,9,Programming,Hyderabad,How can I start learning machine learning?,2026-05-04 08:39:00,2026-05-04,2026-05,2026,2026-09-03 11:34:20.468506
+10,24,Business,Mumbai,How can I improve my career skills?,2026-06-12 15:33:00,2026-06-12,2026-06,2026,2026-09-03 11:34:20.468506
+11,26,Career,Chennai,How can I prepare for a technical interview?,2026-06-24 04:48:00,2026-06-24,2026-06,2026,2026-09-03 11:34:20.468506
+12,3,Technology,Ahmedabad,What is data engineering?,2026-03-06 21:09:00,2026-03-06,2026-03,2026,2026-09-03 11:34:20.468506
+13,2,Programming,Delhi,What is data engineering?,2026-01-23 00:18:00,2026-01-23,2026-01,2026,2026-09-03 11:34:20.468506
+14,4,Career,Ahmedabad,How can I improve my programming skills?,2026-05-26 08:51:00,2026-05-26,2026-05,2026,2026-09-03 11:34:20.468506
+15,25,Programming,Delhi,What is the difference between SQL and NoSQL?,2026-01-28 17:07:00,2026-01-28,2026-01,2026,2026-09-03 11:34:20.468506
+16,11,Health,Chennai,How can I improve my programming skills?,2026-03-04 19:58:00,2026-03-04,2026-03,2026,2026-09-03 11:34:20.468506
+17,2,Technology,Ahmedabad,How can I improve my programming skills?,2026-05-19 08:59:00,2026-05-19,2026-05,2026,2026-09-03 11:34:20.468506
+18,28,Business,Bangalore,How can I learn data analytics?,2026-06-02 06:19:00,2026-06-02,2026-06,2026,2026-09-03 11:34:20.468506
+19,1,Career,Chennai,How can I learn Python?,2026-01-22 13:45:00,2026-01-22,2026-01,2026,2026-09-03 11:34:20.468506
+20,5,Technology,Hyderabad,What is the best way to learn SQL?,2026-03-17 23:34:00,2026-03-17,2026-03,2026,2026-09-03 11:34:20.468506
+21,4,Technology,Mumbai,How can I learn Python?,2026-01-08 23:06:00,2026-01-08,2026-01,2026,2026-09-03 11:34:20.468506
+22,14,Education,Chennai,How can I start learning machine learning?,2026-06-14 09:08:00,2026-06-14,2026-06,2026,2026-09-03 11:34:20.468506
+23,26,General,Ahmedabad,What is the best way to learn SQL?,2026-03-26 04:06:00,2026-03-26,2026-03,2026,2026-09-03 11:34:20.468506
+24,26,Education,Pune,How can I improve my programming skills?,2026-02-08 00:37:00,2026-02-08,2026-02,2026,2026-09-03 11:34:20.468506
+25,30,Education,Mumbai,How can I start learning machine learning?,2026-04-17 21:39:00,2026-04-17,2026-04,2026,2026-09-03 11:34:20.468506
+26,3,Career,Jaipur,What is the best way to learn SQL?,2026-03-04 13:35:00,2026-03-04,2026-03,2026,2026-09-03 11:34:20.468506
+27,8,Health,Mumbai,What are good resources for learning technology?,2026-02-20 06:45:00,2026-02-20,2026-02,2026,2026-09-03 11:34:20.468506
+28,29,Career,Bangalore,What is data engineering?,2026-06-14 15:30:00,2026-06-14,2026-06,2026,2026-09-03 11:34:20.468506
+29,11,Programming,Hyderabad,What is the best way to learn SQL?,2026-03-08 21:48:00,2026-03-08,2026-03,2026,2026-09-03 11:34:20.468506
+30,14,Technology,Jaipur,How can I improve my career skills?,2026-01-28 14:57:00,2026-01-28,2026-01,2026,2026-09-03 11:34:20.468506
+31,3,Technology,Hyderabad,How can I improve my career skills?,2026-03-27 12:22:00,2026-03-27,2026-03,2026,2026-09-03 11:34:20.468506
+32,10,Programming,Delhi,How can I prepare for a technical interview?,2026-06-04 09:39:00,2026-06-04,2026-06,2026,2026-09-03 11:34:20.468506
+33,24,Education,Ahmedabad,What are good resources for learning technology?,2026-01-17 02:44:00,2026-01-17,2026-01,2026,2026-09-03 11:34:20.468506
+34,30,General,Hyderabad,How can I improve my programming skills?,2026-02-08 00:53:00,2026-02-08,2026-02,2026,2026-09-03 11:34:20.468506
+35,12,Health,Hyderabad,How can I prepare for a technical interview?,2026-01-02 08:24:00,2026-01-02,2026-01,2026,2026-09-03 11:34:20.468506
+36,23,Programming,Delhi,How can I improve my career skills?,2026-01-18 07:27:00,2026-01-18,2026-01,2026,2026-09-03 11:34:20.468506
+37,8,Health,Delhi,What are good resources for learning technology?,2026-04-16 20:51:00,2026-04-16,2026-04,2026,2026-09-03 11:34:20.468506
+38,8,General,Ahmedabad,How can I learn data analytics?,2026-04-06 08:56:00,2026-04-06,2026-04,2026,2026-09-03 11:34:20.468506
+39,25,Health,Hyderabad,What are good resources for learning technology?,2026-06-24 08:12:00,2026-06-24,2026-06,2026,2026-09-03 11:34:20.468506
+40,19,Health,Delhi,How can I learn data analytics?,2026-05-23 09:34:00,2026-05-23,2026-05,2026,2026-09-03 11:34:20.468506
+41,1,Career,Mumbai,What is the difference between SQL and NoSQL?,2026-03-17 15:25:00,2026-03-17,2026-03,2026,2026-09-03 11:34:20.468506
+42,25,General,Hyderabad,How can I improve my programming skills?,2026-01-30 08:46:00,2026-01-30,2026-01,2026,2026-09-03 11:34:20.468506
+43,2,Programming,Pune,How can I start learning machine learning?,2026-03-27 21:05:00,2026-03-27,2026-03,2026,2026-09-03 11:34:20.468506
+44,5,Health,Pune,What is the difference between SQL and NoSQL?,2026-05-29 23:10:00,2026-05-29,2026-05,2026,2026-09-03 11:34:20.468506
+45,12,Programming,Delhi,What is data engineering?,2026-02-10 21:58:00,2026-02-10,2026-02,2026,2026-09-03 11:34:20.468506
+46,19,Programming,Chennai,What is the difference between SQL and NoSQL?,2026-01-22 15:50:00,2026-01-22,2026-01,2026,2026-09-03 11:34:20.468506
+47,28,Technology,Chennai,How can I improve my programming skills?,2026-02-20 16:02:00,2026-02-20,2026-02,2026,2026-09-03 11:34:20.468506
+48,4,Health,Hyderabad,What is the best way to learn SQL?,2026-06-10 02:52:00,2026-06-10,2026-06,2026,2026-09-03 11:34:20.468506
+49,13,Career,Delhi,What is the best way to learn SQL?,2026-03-31 08:19:00,2026-03-31,2026-03,2026,2026-09-03 11:34:20.468506
+50,11,Health,Mumbai,How can I learn data analytics?,2026-02-19 00:23:00,2026-02-19,2026-02,2026,2026-09-03 11:34:20.468506
+51,22,Programming,Bangalore,What are good resources for learning technology?,2026-02-03 18:59:00,2026-02-03,2026-02,2026,2026-09-03 11:34:20.468506
+52,11,Programming,Jaipur,How can I improve my career skills?,2026-02-06 18:10:00,2026-02-06,2026-02,2026,2026-09-03 11:34:20.468506
+53,6,Business,Bangalore,What is the difference between SQL and NoSQL?,2026-01-13 00:14:00,2026-01-13,2026-01,2026,2026-09-03 11:34:20.468506
+54,9,Career,Jaipur,What is data engineering?,2026-05-25 19:22:00,2026-05-25,2026-05,2026,2026-09-03 11:34:20.468506
+55,21,Career,Hyderabad,How can I prepare for a technical interview?,2026-03-13 03:02:00,2026-03-13,2026-03,2026,2026-09-03 11:34:20.468506
+56,7,Technology,Jaipur,How can I start learning machine learning?,2026-01-26 10:53:00,2026-01-26,2026-01,2026,2026-09-03 11:34:20.468506
+57,8,Programming,Delhi,How can I learn data analytics?,2026-02-18 12:28:00,2026-02-18,2026-02,2026,2026-09-03 11:34:20.468506
+58,22,Programming,Delhi,What is the best way to learn SQL?,2026-01-25 10:27:00,2026-01-25,2026-01,2026,2026-09-03 11:34:20.468506
+59,22,Health,Mumbai,How can I improve my programming skills?,2026-06-20 08:10:00,2026-06-20,2026-06,2026,2026-09-03 11:34:20.468506
+60,27,General,Jaipur,What is data engineering?,2026-02-17 23:16:00,2026-02-17,2026-02,2026,2026-09-03 11:34:20.468506
+61,1,Health,Delhi,What is the best way to learn SQL?,2026-02-03 04:24:00,2026-02-03,2026-02,2026,2026-09-03 11:34:20.468506
+62,26,Business,Delhi,How can I improve my career skills?,2026-06-21 23:45:00,2026-06-21,2026-06,2026,2026-09-03 11:34:20.468506
+63,25,Technology,Jaipur,What are good resources for learning technology?,2026-01-03 08:18:00,2026-01-03,2026-01,2026,2026-09-03 11:34:20.468506
+64,9,Programming,Pune,How can I learn Python?,2026-05-26 17:46:00,2026-05-26,2026-05,2026,2026-09-03 11:34:20.468506
+65,10,Health,Chennai,What are good resources for learning technology?,2026-05-16 19:16:00,2026-05-16,2026-05,2026,2026-09-03 11:34:20.468506
+66,14,Career,Jaipur,How can I learn Python?,2026-01-14 03:53:00,2026-01-14,2026-01,2026,2026-09-03 11:34:20.468506
+67,24,Programming,Ahmedabad,What is the difference between SQL and NoSQL?,2026-03-05 08:55:00,2026-03-05,2026-03,2026,2026-09-03 11:34:20.468506
+68,17,Business,Bangalore,How can I learn Python?,2026-01-10 22:59:00,2026-01-10,2026-01,2026,2026-09-03 11:34:20.468506
+69,1,Health,Mumbai,How can I prepare for a technical interview?,2026-02-12 23:14:00,2026-02-12,2026-02,2026,2026-09-03 11:34:20.468506
+70,13,General,Ahmedabad,What are good resources for learning technology?,2026-03-28 17:04:00,2026-03-28,2026-03,2026,2026-09-03 11:34:20.468506
+71,23,Education,Hyderabad,What is the best way to learn SQL?,2026-04-28 20:26:00,2026-04-28,2026-04,2026,2026-09-03 11:34:20.468506
+72,12,Business,Ahmedabad,What is the best way to learn SQL?,2026-03-10 03:05:00,2026-03-10,2026-03,2026,2026-09-03 11:34:20.468506
+73,13,Education,Hyderabad,How can I start learning machine learning?,2026-04-12 15:41:00,2026-04-12,2026-04,2026,2026-09-03 11:34:20.468506
+74,5,General,Hyderabad,What are good resources for learning technology?,2026-05-01 19:38:00,2026-05-01,2026-05,2026,2026-09-03 11:34:20.468506
+75,7,Health,Bangalore,How can I learn data analytics?,2026-05-08 06:46:00,2026-05-08,2026-05,2026,2026-09-03 11:34:20.468506
+76,3,Career,Hyderabad,How can I improve my programming skills?,2026-06-10 06:45:00,2026-06-10,2026-06,2026,2026-09-03 11:34:20.468506
+77,26,Technology,Pune,How can I improve my career skills?,2026-04-11 22:29:00,2026-04-11,2026-04,2026,2026-09-03 11:34:20.468506
+78,3,Education,Delhi,How can I learn data analytics?,2026-02-01 20:59:00,2026-02-01,2026-02,2026,2026-09-03 11:34:20.468506
+79,9,General,Pune,How can I learn Python?,2026-04-30 08:28:00,2026-04-30,2026-04,2026,2026-09-03 11:34:20.468506
+80,30,Health,Mumbai,What are good resources for learning technology?,2026-01-24 06:07:00,2026-01-24,2026-01,2026,2026-09-03 11:34:20.468506
+81,8,Business,Jaipur,How can I prepare for a technical interview?,2026-06-01 04:09:00,2026-06-01,2026-06,2026,2026-09-03 11:34:20.468506
+82,20,Business,Delhi,How can I prepare for a technical interview?,2026-05-23 23:55:00,2026-05-23,2026-05,2026,2026-09-03 11:34:20.468506
+83,8,Health,Delhi,What are good resources for learning technology?,2026-05-07 00:31:00,2026-05-07,2026-05,2026,2026-09-03 11:34:20.468506
+84,5,Education,Hyderabad,How can I start learning machine learning?,2026-01-31 04:44:00,2026-01-31,2026-01,2026,2026-09-03 11:34:20.468506
+85,29,Business,Ahmedabad,How can I improve my career skills?,2026-04-26 03:08:00,2026-04-26,2026-04,2026,2026-09-03 11:34:20.468506
+86,22,Programming,Jaipur,How can I improve my career skills?,2026-05-23 20:38:00,2026-05-23,2026-05,2026,2026-09-03 11:34:20.468506
+87,13,General,Pune,How can I improve my programming skills?,2026-02-06 12:27:00,2026-02-06,2026-02,2026,2026-09-03 11:34:20.468506
+88,11,Programming,Mumbai,How can I learn data analytics?,2026-03-24 20:56:00,2026-03-24,2026-03,2026,2026-09-03 11:34:20.468506
+89,7,Programming,Bangalore,What is data engineering?,2026-04-17 11:03:00,2026-04-17,2026-04,2026,2026-09-03 11:34:20.468506
+90,2,Education,Bangalore,What is data engineering?,2026-04-20 17:34:00,2026-04-20,2026-04,2026,2026-09-03 11:34:20.468506
+91,18,Career,Chennai,How can I improve my programming skills?,2026-04-28 01:13:00,2026-04-28,2026-04,2026,2026-09-03 11:34:20.468506
+92,14,Health,Delhi,How can I improve my programming skills?,2026-02-06 13:16:00,2026-02-06,2026-02,2026,2026-09-03 11:34:20.468506
+93,12,Technology,Hyderabad,What is the best way to learn SQL?,2026-05-24 10:49:00,2026-05-24,2026-05,2026,2026-09-03 11:34:20.468506
+94,1,Business,Hyderabad,How can I improve my career skills?,2026-02-11 09:04:00,2026-02-11,2026-02,2026,2026-09-03 11:34:20.468506
+95,8,Programming,Ahmedabad,What is the best way to learn SQL?,2026-02-11 12:19:00,2026-02-11,2026-02,2026,2026-09-03 11:34:20.468506
+96,13,Business,Mumbai,How can I learn data analytics?,2026-06-03 11:30:00,2026-06-03,2026-06,2026,2026-09-03 11:34:20.468506
+97,12,Programming,Jaipur,How can I learn Python?,2026-03-26 18:39:00,2026-03-26,2026-03,2026,2026-09-03 11:34:20.468506
+98,5,General,Ahmedabad,What is the difference between SQL and NoSQL?,2026-06-17 16:46:00,2026-06-17,2026-06,2026,2026-09-03 11:34:20.468506
+99,2,Business,Pune,How can I improve my career skills?,2026-01-22 15:13:00,2026-01-22,2026-01,2026,2026-09-03 11:34:20.468506
+100,8,Business,Hyderabad,What is the best way to learn SQL?,2026-04-24 10:37:00,2026-04-24,2026-04,2026,2026-09-03 11:34:20.468506
