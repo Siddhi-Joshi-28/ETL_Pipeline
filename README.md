@@ -346,3 +346,21 @@ This project demonstrates:
 - Automated Testing
 - Streamlit Dashboard
 - Git and GitHub
+
+## Complete Workflow
+
+Whenever the data changes:
+
+1. Update raw CSV
+       ↓
+2. Run ETL pipeline
+   python -m src.pipeline
+       ↓
+3. Check that pipeline completed successfully
+       ↓
+4. Open/refresh Streamlit
+   streamlit run app.py
+       ↓
+5. Click "🔄 Refresh Data"
+       ↓
+6. Dashboard shows latest data
