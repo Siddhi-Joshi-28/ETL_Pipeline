@@ -1,4 +1,0 @@
-order_id,customer_id,restaurant_id,order_timestamp,city,restaurant_category,order_status,payment_method,delivery_type,item_count,order_amount,discount,delivery_fee,rating,delivery_time_minutes
-900001,1001,101,2026-09-03 10:00:00,Ahmedabad,Pizza,Delivered,UPI,Normal,2,500,50,30,4.5,30
-900002,1002,102,2026-09-03 10:05:00,Mumbai,Indian,WrongStatus,UPI,Normal,2,600,50,30,4,35
-900003,1003,103,2026-09-03 10:10:00,Delhi,Chinese,Delivered,UPI,Normal,0,-100,50,30,7,40
